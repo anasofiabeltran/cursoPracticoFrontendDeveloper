@@ -4,11 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
     <title>Document</title>
     <style>
+
+    :root{
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #f7f7f7;
+            --hospital-green: #acd9b2;
+            --white: #FFFFFF;
+            --black: #000000;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        
+        }
+
+        body{
+            font-family:'Quicksand';
+        }
+
         .desktop-menu{
             width: 100px;
             height: auto;
+            /*para colocar el borde del menu*/
+            border: 1px solid var(--very-light-pink);
+            border-radius: 6px;
+            padding: 20px 20px 0px ;
+        }
+
+        /*vamos a quitar los puntos de la lista*/
+        .desktop-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .desktop-menu ul li{
+            text-align: end;
+            font-weight: bold;
+        }
+
+        .desktop-menu ul li:last-child{
+            padding-top: 20px;
+            border-top: 1px solid var(--very-light-pink); /*se coloca el border-top para no tener que colocar un div que divida los items...solo con el borde se puede realizar*/
+            font-weight:normal;
+        }
+
+        .desktop-menu ul li:last-child a{
+            color: var(--hospital-green);
+            font-size: var(--sm);
+        }
+
+        .desktop-menu ul li a{
+            color: var(--black);
+            text-decoration: none;
+            /*recordando que a los elementos inline no se le puede aplicar el margin... hay que convertir esto en un elemento inline pero que tenga caracteristicas de bloque... "inline-block"*/
+            margin-bottom: 20px;
+            display: inline-block;
+
         }
     </style>
 </head>
